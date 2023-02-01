@@ -39,7 +39,8 @@ jobs:
                    -DKOMPUTE_OPT_BUILD_SHADERS=0 \
                    -DKOMPUTE_OPT_BUILD_SINGLE_HEADER=0 \
                    -DKOMPUTE_OPT_CODE_COVERAGE=0 \
-                   -DKOMPUTE_OPT_BUILD_DOCS=0
+                   -DKOMPUTE_OPT_BUILD_DOCS=0 \
+                   -DKOMPUTE_OPT_DISABLE_VULKAN_VERSION_CHECK=ON
       - name: Run build-wrapper
         run: |
           build-wrapper-linux-x86-64 --out-dir ${{ env.BUILD_WRAPPER_OUT_DIR }} ninja -C build
